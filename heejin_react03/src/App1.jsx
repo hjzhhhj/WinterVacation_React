@@ -1,24 +1,24 @@
-import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import Userlist from "./components/Userlist";
-import Timer from "./components/Timer";
+import Home from "./components/Home";
+import TimerPage from "./pages/Timerpage";
 import Navi from "./components/common/Navi";
-import SimpleCounterPage from "./pages/SimpleCounterPage.jsx";
+import SimpleCountPage from "./pages/SimpleCounterPage";
+import TodoApp from "./pages/TodoApp";
+import "./App.css";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Navi />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/usermenu" element={<Userlist />}></Route>
-        <Route path="/timermenu" element={<Timer />}></Route>
-        <Route
-          path="/simplecountermenu"
-          element={<SimpleCounterPage />}
-        ></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/usermenu" element={<Userlist />} />
+        <Route path="/timermenu" element={<TimerPage />} />
+        <Route path="/simplecountermenu" element={<SimpleCountPage />} />
+        <Route path="/todomenu" element={<TodoApp />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

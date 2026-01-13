@@ -1,19 +1,19 @@
 import Viewer from "../components/Viewer";
-import Even from "../components/Even";
 import Controller from "../components/Controller";
+import Even from "../components/Even";
 import { useState } from "react";
 
-export default function SimpleCountPage() {
+function SimpleCountPage() {
   const [count, setCount] = useState(0);
   const [input, setInput] = useState("");
-  const onClickButton = (num) => {
+
+  function onClickButton(num) {
     setCount(count + num);
-  };
+  }
   return (
     <>
-      <h1>Simple Counter</h1>
+      <h1>simple Counter</h1>
       <input
-        type="text"
         value={input}
         onChange={(e) => {
           setInput(e.target.value);
@@ -30,3 +30,4 @@ export default function SimpleCountPage() {
     </>
   );
 }
+export default SimpleCountPage;
