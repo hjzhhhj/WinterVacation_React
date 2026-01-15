@@ -1,7 +1,8 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
 import "./Editor.css";
+import { TodoStateContxet } from "../../pages/TodoApp2";
 
-function Editor({ onCreate }) {
+function Editor() {
   const [content, setContent] = useState("");
   const inputRef = useRef();
 

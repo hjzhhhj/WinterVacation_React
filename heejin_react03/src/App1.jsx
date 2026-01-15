@@ -4,8 +4,10 @@ import Home from "./components/Home";
 import TimerPage from "./pages/Timerpage";
 import Navi from "./components/common/Navi";
 import SimpleCountPage from "./pages/SimpleCounterPage";
-import TodoApp from "./pages/TodoApp";
+import TodoApp from "./pages/TodoApp2";
 import "./App.css";
+import ReducerExam from "./components/todoComponets/ReducerExam";
+import ShowItem from "./components/ShowItem";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/timermenu" element={<TimerPage />} />
         <Route path="/simplecountermenu" element={<SimpleCountPage />} />
         <Route path="/todomenu" element={<TodoApp />} />
+        <Route path="/reducermenu" element={<ReducerExam />} />
+        <Route path="/showItem/:id" element={<ShowItem />} />
       </Routes>
     </div>
   );

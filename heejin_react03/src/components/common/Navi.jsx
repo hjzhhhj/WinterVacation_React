@@ -14,6 +14,8 @@ function Navi() {
         <button onClick={onClickButton}>사용자목록 버튼</button>
         <Link to={"/simplecountermenu"}>[간단한 카운터]</Link>
         <Link to={"/todomenu"}>[Todo list 앱]</Link>
+        <Link to={"/reducermenu"}>[Reducer 앱]</Link>
+        <Link to={"/"}>[useParam 연습]</Link>
       </div>
     </>
   );
